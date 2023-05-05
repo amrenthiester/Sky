@@ -1,0 +1,13 @@
+ viewConfig: {
+                    forceFit: true,
+                    enableRowBody: true,
+                    showPreview: true
+                }
+            });
+
+            this.rowClick = function(event){
+                grid.on('rowclick', function(grid, rowIndex, e) {
+                    var r = grid.getStore().getAt(rowIndex);
+                    event(r, rowIndex);
+	            });
+            }  
